@@ -41,8 +41,16 @@ Tips for setting up your environment can be found [here](https://classroom.udaci
 
 This project is to use PID controller to keep the vehicle in the center of the road.
 * What I do is to set a training loss and use a simple gradient decent to train the model
+The training loss 
 * After using the gradient decent method i get the P, I ,D for {55.64473,0.00847472,875.161}
-* I find the vehicle move in 
+* I find the vehicle move in a very slow vehicle and it drive in a zig-zag form. 
+![image](https://github.com/chunhsienho/CarND-PID-Control-Project/blob/master/Big_D.png)
+I think i should adjust the D parameter so I reduce the D parameter from 875-> 75. The vehicle work better.
+
+* After I change the D parameter, I find the vehicle may have big overshot. 
+![image](https://github.com/chunhsienho/CarND-PID-Control-Project/blob/master/Big_P.png)
+I think i should adjust the P parameter.
+So I change the P parameter from 55.64473 to 5.64473 and the vehicle run very well.
 
 ## Code Style
 
