@@ -62,8 +62,10 @@ I think i should adjust the D parameter so I reduce the D parameter from 875-> 7
 * After I change the D parameter, I find the vehicle may have big overshot. 
 ![image](https://github.com/chunhsienho/CarND-PID-Control-Project/blob/master/Big_P.png)
 I think i should adjust the P parameter.
-So I change the P parameter from 55.64473 to 5.64473 and the vehicle run very well. 
+So I change the P parameter from 55.64473 to 0.64473 and the vehicle run very well. 
+The final parameter for PID is {0.64473,0.00847472,75.161}
 The vehicle would stay in the center of the road and run in 30-40 mph
+![image](https://github.com/chunhsienho/CarND-PID-Control-Project/blob/master/Big_P.png)
 
 
 
