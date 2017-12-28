@@ -37,14 +37,12 @@ There's an experimental patch for windows in this [PR](https://github.com/udacit
 
 Tips for setting up your environment can be found [here](https://classroom.udacity.com/nanodegrees/nd013/parts/40f38239-66b6-46ec-ae68-03afd8a601c8/modules/0949fca6-b379-42af-a919-ee50aa304e6a/lessons/f758c44c-5e40-4e01-93b5-1a82aa4e044f/concepts/23d376c7-0195-4276-bdf0-e02f1f3c665d)
 
-## Editor Settings
+## How did I do this project
 
-We've purposefully kept editor configuration files out of this repo in order to
-keep it as simple and environment agnostic as possible. However, we recommend
-using the following settings:
-
-* indent using spaces
-* set tab width to 2 spaces (keeps the matrices in source code aligned)
+This project is to use PID controller to keep the vehicle in the center of the road.
+* What I do is to set a training loss and use a simple gradient decent to train the model
+* After using the gradient decent method i get the P, I ,D for {55.64473,0.00847472,875.161}
+* I find the vehicle move in 
 
 ## Code Style
 
