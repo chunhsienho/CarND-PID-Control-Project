@@ -33,9 +33,10 @@ void PID::UpdateError(double cte,double speed,double angle) {
     d_error=cte-p_error;
     p_error=cte;
     i_error+=cte;
-    total_error+=cte*cte/speed;
+    total_error = total_error+ cte*cte/speed;
     double steer_new=-Kp*p_error-Ki*i_error-Kd*d_error;
     steer_value=steer_new;
+    
     steer_value=fmax(-1,steer_value);
     steer_value=fmin(1,steer_value);
     throttle=0.40f;
