@@ -37,11 +37,23 @@ There's an experimental patch for windows in this [PR](https://github.com/udacit
 
 Tips for setting up your environment can be found [here](https://classroom.udacity.com/nanodegrees/nd013/parts/40f38239-66b6-46ec-ae68-03afd8a601c8/modules/0949fca6-b379-42af-a919-ee50aa304e6a/lessons/f758c44c-5e40-4e01-93b5-1a82aa4e044f/concepts/23d376c7-0195-4276-bdf0-e02f1f3c665d)
 
-## How did I do this project
+## PID Concept
+The PID is a very important concept in this project
+Here is the concept of three parameter
+
+P(Proportional) => Let the car handle all the turning(right and left)
+I(Intergral) => Reduce the steady state error between the car and desire tragetory 
+D(Dufferential) => Reduce the possibility of overshoting and oscillating when the car is turning
+
+
+## How did I do this project and tune the PID parameter
 
 This project is to use PID controller to keep the vehicle in the center of the road.
 * What I do is to set a training loss and use a simple gradient decent to train the model
-The training loss 
+I train the vehicle in a very small distance because the vehicle would learn nothing if it jump into the water or bumbed into a tree
+The training loss = cte * cte / speed 
+=> This would let the car be close to the center of the road 
+
 * After using the gradient decent method i get the P, I ,D for {55.64473,0.00847472,875.161}
 * I find the vehicle move in a very slow vehicle and it drive in a zig-zag form. 
 ![image](https://github.com/chunhsienho/CarND-PID-Control-Project/blob/master/Big_D.png)
@@ -50,7 +62,12 @@ I think i should adjust the D parameter so I reduce the D parameter from 875-> 7
 * After I change the D parameter, I find the vehicle may have big overshot. 
 ![image](https://github.com/chunhsienho/CarND-PID-Control-Project/blob/master/Big_P.png)
 I think i should adjust the P parameter.
-So I change the P parameter from 55.64473 to 5.64473 and the vehicle run very well.
+So I change the P parameter from 55.64473 to 5.64473 and the vehicle run very well. 
+The vehicle would stay in the center of the road and run in 30-40 mph
+
+
+
+
 
 ## Code Style
 
